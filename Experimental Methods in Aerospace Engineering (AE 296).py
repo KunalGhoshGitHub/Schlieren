@@ -39,7 +39,7 @@
 # * **Step 4:** Start searching for the values of the pixels greater than or equal to the threshold value decided from the top of the column. If found then mark that pixel and check whether it is coinciding with the shock wave or not. If not, then change the threshold value and repeat this step. 
 # * **Step 5:** Only the first pixel in the column is to be marked, then go to the next step.
 # * **Step 6:** Repeat this for all the remaining columns in the frame. (Threshold value is to be set only for the first column of the first frame of the video.)
-# * **Step 7:** Repeat step 4 and step 5 unless it is the last frame of the video. 
+# * **Step 7:** Repeat step 4, step 5 and step 6 unless it is the last frame of the video. 
 # * **Step 8:** Now perform the FFT (Fast Fourier Transform) for each of the columns and plot it along with the corresponding frequencies in a semilog graph.
 # * **Step 9:** Identify the peak in this graph. This is the dominant time period, T. (We have taken the mode of this data for peaks at different horizontal locations, though all of it is giving the same frequency)
 
@@ -385,7 +385,7 @@ Image(filename='Temporal_Standard_Deviation_Map.jpg')
 # * **Step 1:** From the actual flow interval and the dominant time period. We find the number of the oscillations in the video
 # * **Step 2:** Then from the total number of frames in the given video, calculate the number of frames that belong to each oscillation.
 # * **Step 3:** Get the first frame of the first oscillation
-# * **Step 4:** Get all the in-phase to the first frame of all the oscillations and average them.
+# * **Step 4:** Get all the frames which are in-phase to the first frame, from all the oscillations and average them.
 # * **Step 5:** Repeat steps 3 and 4 for all the remaining frames in the first oscillation and store them in the same order.
 # * **Step 6:** The resulting video from these ordered frames is the phase-averaged schlieren video that runs over one time period T
 
